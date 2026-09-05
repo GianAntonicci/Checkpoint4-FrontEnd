@@ -14,36 +14,33 @@
     scroll-behavior: smooth;
 }
 
-.main {
-    background-color: var(--background1);
-}
 
-.menu {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
+.header {
+    height: 145px;
+    padding: 0 14%;
+    background-color: var(--background1);
+    color: var(--primary);
     display: flex;
-    justify-content: center;
-    padding: 17px 15px;
-    gap: 20px;
-    background-color: var(--background1);
+    align-items: center;
+    justify-content: space-between;
 }
 
-.menu a {
+.header h1 {
+    font-family: "Poppins", Arial;
+    font-size: 28px;
+    font-weight: 700;
+}
 
-    color: aliceblue;
+.header nav {
+    display: flex;
+    gap: 48px;
+}
+
+.header a {
+    color: var(--primary);
     text-decoration: none;
-    text-transform: uppercase;
+    font-family: "Poppins";
     font-size: 20px;
-    font-style: 'Poppins';
-    margin: 0 15px;
-    padding: 7px 5px;
-    transition: border-color .5s ease;
-}
-
-.span {
-    color: var(--secondary);
 }
 
 .banner {
