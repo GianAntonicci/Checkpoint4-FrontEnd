@@ -17,35 +17,72 @@
 
 
 .header {
-    height: 145px;
-    padding: 0 14%;
-    background-color: var(--background);
-    color: var(--primary);
+    width: 100%;
+    padding: 28px 0;
+}
+
+.header-conteudo {
+    width: min(1140px, calc(100% - 80px));
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
-.header h1 {
-    font-family: "Poppins", Arial;
+.logo, .menu a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover, .menu a:hover {
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.logo {
     font-size: 28px;
     font-weight: 700;
 }
 
-.header h1 span {
-    color: var(--secondary);
-}
-
-.header nav {
+.menu {
     display: flex;
-    gap: 48px;
+    align-items: center;
+    gap: 40px;
 }
 
-.header a {
-    color: var(--secondary);
+.menu a {
+    font-size: 18px;
+    color: var(--primary);
     text-decoration: none;
-    font-family: "Poppins";
-    font-size: 20px;
+    transition: color 0,3s ease;
+}
+
+
+
+.logo {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    gap: 45px;
+}
+
+.menu a {
+    font-size: 18px;
+}
+
+.logo:hover, .menu a:hover {
+    color: var(--cinza);
 }
 
 body {
@@ -55,7 +92,7 @@ body {
 }
 
 .secao1 {
-    width: min(var(--largura-maxima), calc(100% - 40px));
+    width: min(var(--largura-maxima), calc(100% - 80px));
     margin: 70px auto;
     display: grid;
     gap: 40px;
