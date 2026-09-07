@@ -469,3 +469,81 @@ button:hover {
         gap: 40px;
     }
 }
+
+@media (max-width: 768px) {
+    .header {padding: 20px 0;}
+    .header-conteudo, .secao1, .secao3 {
+        width: calc(100% - 40px);
+    }
+    .header-conteudo {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .secao1 {margin: 40px auto; gap: 30px;}
+    .principal {height: 260px;}
+    .descricao {font-size: 16px;}
+    button {
+        width: 100%;
+        margin-top: 25px;
+    }
+    .galeria1 {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+    .galeria1 img {height: 200px;}
+
+    .galeria-secao2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(4, 150px);
+        grid-template-areas:
+            "a1 a3"
+            "a2 a3"
+            "a4 a5"
+            "a4 a6";
+        grid-auto-rows: auto;
+        gap: 14px;
+    }
+    .galeria-secao2 .img1 { grid-area: a1; }
+    .galeria-secao2 .img2 { grid-area: a2; }
+    .galeria-secao2 .img3 { grid-area: a3; }
+    .galeria-secao2 .img4 { grid-area: a4; }
+    .galeria-secao2 .img5 { grid-area: a5; }
+    .galeria-secao2 .img6 { grid-area: a6; }
+
+    .secao3 {margin: 40px auto; gap: 70px;}
+    .titulo-depoimentos {font-size: 28px;}
+    .depoimento {
+        padding: 60px 25px 25px;
+        border-radius: 28px;
+    }
+    .depoimento p {font-size: 16px;}
+    .depoimento img {
+        top: -40px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer {padding: 50px 20px 25px;}
+    .footer-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: 
+            "marca"
+            "nav"
+            "contato"
+            "redes";
+        gap: 32px;
+    }
+    .footer-logo {font-size: 24px;}
+    .footer-base {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        text-align: center;
+    }
+    .footer-base p:last-child {text-align: center;}
+}
