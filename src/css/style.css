@@ -59,7 +59,7 @@ html {
     font-size: 18px;
     color: var(--off-white);
     text-decoration: none;
-    transition: color 0,3s ease;
+    transition: color 0.3s ease;
 }
 
 
@@ -234,7 +234,6 @@ button:hover {
 .depoimento {
   position: relative;
   width: 100%;
-  height: 205px;
   min-height: 205px;
   padding: 70px 40px 30px;
   display: flex;
@@ -357,10 +356,6 @@ button:hover {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer li:hover {
-    color: var(--off-white);
-    transform: translateY(4px);
-}
 
 .footer li a:hover {
     color: var(--off-white);
@@ -415,4 +410,62 @@ button:hover {
 
 .footer-base p:last-child {
     text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .header-conteudo, .secao1, .secao3 {
+        width: calc(100% - 60px);
+    }
+    .logo {font-size: 24px;}
+    .menu {gap: 28px;}
+    .menu a {font-size: 16px;}
+
+    .principal {height: 400px;}
+    .conteudo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+    .descricao {font-size: 18px;}
+    .galeria1 {gap: 20px;}
+    .galeria1 img {height: 220px;}
+
+    .secao2 {padding: 40px;}
+    .galeria-secao2 {
+        grid-template-areas: none;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-rows: none;
+        grid-auto-rows: 240px;
+    }
+    .galeria-secao2 img {grid-area: auto;}
+
+    .secao3 {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: 
+            "titulo"
+            "depoimento1"
+            "depoimento2"
+            "depoimento3";
+        gap: 80px;
+    }
+    .titulo-depoimentos {
+        justify-self: center;
+        text-align: center;
+        font-size: 34px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: 
+            "marca marca"
+            "nav contato"
+            "redes redes";
+        gap: 40px;
+    }
 }
