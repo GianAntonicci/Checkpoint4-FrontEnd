@@ -437,13 +437,17 @@ button:hover {
     .galeria1 img {height: 220px;}
 
     .secao2 {padding: 40px;}
+
     .galeria-secao2 {
-        grid-template-areas: none;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-template-rows: none;
-        grid-auto-rows: 240px;
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+        grid-template-rows: repeat(4, 220px);
+        grid-template-areas: 
+            "a1 a3"
+            "a2 a3"
+            "a4 a5"
+            "a4 a6";
+        gap: 18px;
     }
-    .galeria-secao2 img {grid-area: auto;}
 
     .secao3 {
         grid-template-columns: minmax(0, 1fr);
